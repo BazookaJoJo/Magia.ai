@@ -22,6 +22,7 @@ country = ""
 region = ""
 city = ""
 Winkler = ""
+climate = ""
 
 regions = {}
 
@@ -31,9 +32,10 @@ for row in table.findAll("tr"):
     region = str(cells[1].findAll(text=True))
     city = str(cells[2].find(text=True))
     Winkler = str(cells[5].find(text=True))
-    
     regions[region] = Winkler
+    print Winkler
 
-    print regions[region]
+    
+    
+#print regions['Bordeaux']
 
-#print table

@@ -17,8 +17,8 @@ def main():
             print " "
 
     print "The most popular regions of " + query + " are " + str(infobox.get('regions').value.get(1).text) + ", " + str(infobox.get('regions').value.get(3).text) + ", and " + str(infobox.get('regions').value.get(5).text) + "."
-
-    print infobox.get('wine_general').value.get(0)
+    
+    print infobox.get('wine_medium').value.get(0)
 
 
 
