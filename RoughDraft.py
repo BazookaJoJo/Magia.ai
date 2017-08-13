@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 import urllib
 import json
 import sys
+import csv
 
 '''
 variables
@@ -136,10 +137,21 @@ def popularInRegion():
             break
             
     
-    
+def vintage():
+    '''
+    vintage.csv file contains a numerical rating for how good the wine in that year was as well as a letter representing if
+    the wine is ready to drink, is too late to drink, or should be waited for to drink in the future
+    '''
+     with open('vintage.csv') as csvfile:
+         reader = csv.DictReader(csvfile)
+         for row in reader:
+             if row['Region'] == region:
+                 print row[str(year)]
+        
 
 summary()
 popularInRegion()
+vintage()
     
 
 
